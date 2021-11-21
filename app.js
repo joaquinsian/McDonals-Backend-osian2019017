@@ -6,20 +6,23 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 
-
-//importacion de rutas
-const Login_routes = require('./src/routes/loginRoutes');
- 
 //Middlewares
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(morgan("dev"));
 
-
 //cabeceras
 app.use(cors());
 
-//utilizacion de rutas
-app.use('/CSMC', Login_routes)
+//importacion de rutas
+const Empresa_routes = require('./src/routes/empresa.routes');
+const Sucursal_routes = require('./src/routes/sucursal.routes');
+const Producto_routes = require('./src/routes/producto.routes')
 
+//utilizacion de rutas
+app.use('/CSMC', Empresa_routes)
+app.use('/CSMC', Sucursal_routes)
+app.use('/CSMC', Producto_routes)
+
+//exportacion de rutas
 module.exports = app;

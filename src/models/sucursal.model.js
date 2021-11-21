@@ -4,7 +4,9 @@ var Schema = mongoose.Schema;
 
 var sucursalSchema  = Schema({
     empresa: {type: Schema.Types.ObjectId, ref: 'empresa'},
-    producto: {type: Schema.Types.ObjectId, ref: 'producto'},
+    user: String,
+    password: String,
+    rol: String,
     nombreSucursal: String,
     direccionSucursal: String
 })
