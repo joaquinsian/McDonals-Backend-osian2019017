@@ -1,6 +1,6 @@
 'use strict'
 const express = require('express');
-const empresaController = require('../controllers/empresa.controller');
+const empresaController = require('../controllers/empresa.controller')
 const authentication  = require('../middlewares/authenticated')
 
 var api = express.Router(); 
