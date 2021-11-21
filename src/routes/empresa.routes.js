@@ -5,6 +5,6 @@ const authentication  = require('../middlewares/authenticated')
 
 var api = express.Router(); 
 api.post('/login', empresaController.login)
-api.post('/productsucursal', authentication.ensureAuth, empresaController.productsucursal)
+api.post('/newproducto', authentication.ensureAuth, empresaController.newproducto)
 
 module.exports = api;

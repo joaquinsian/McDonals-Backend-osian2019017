@@ -4,7 +4,7 @@ const Sucursal = require('../models/sucursal.model');
 const Producto = require('../models/producto.model');
 const bcrypt = require("bcrypt-nodejs");
 const jwt = require("../service/jwt");
-
+ 
 //Función para logear
 function login(req, res) {
     var params = req.body;
